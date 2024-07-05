@@ -1,7 +1,15 @@
+#   ------
+#%% prompt
+#   ------
+fpath+=($HOME/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
+
 # Set up the prompt
-autoload -U colors && colors
-#PROMPT='%F{green}%M %(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %# '
-PROMPT='%F{green}%M %(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b  ' #%F{green}>%f '
+# autoload -U colors && colors
+# #PROMPT='%F{green}%M %(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %# '
+# PROMPT='%F{green}%M %(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b  ' #%F{green}>%f '
+
 
 # PATH 
 export PATH=/usr/local/bin/:bin/:$PATH
