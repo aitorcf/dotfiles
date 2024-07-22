@@ -4,3 +4,5 @@ if (not status) then
 end
 
 neogit.setup {}
+
+vim.keymap.set("n","<leader>ng",":Neogit<cr>",{silent=true})
