@@ -21,4 +21,4 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 # vim-tex
 sudo apt install zathura
 sudo apt install texlive-full
-udo apt-get install latexmk
+sudo apt install latexmk
