@@ -306,10 +306,10 @@ bindsym $mod+i resize shrink height 3 px or 3 ppt
 bindsym $mod+o resize grow width 3 px or 3 ppt
 
 bar {
-    font pango: FontAwesome Regular, Inconsolata for Powerline 10
+    font pango: FontAwesome, FiraCode Nerd Font 9
     position top
     tray_output none
-    status_command bumblebee-status \
+    status_command ~/.config/i3/bumblebee-status/bumblebee-status \
         -m xrandr pulsein pulseout disk:root cpu memory battery date time network \
         -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
         -t gruvbox-powerline
