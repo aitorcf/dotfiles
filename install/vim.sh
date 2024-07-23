@@ -1,5 +1,7 @@
 #!/bin/bash 
 
+sudo apt install vim
+
 # curl
 sudo apt install curl
 
