@@ -1,13 +1,5 @@
 #!/bin/bash
 
-# i3
-sudo apt install i3
-
-# firacode font
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1l/FiraCode.zip
-unzip FiraCode.zip -d ~/.fonts
-fc-cache -fv
-rm FiraCode.zip
 
 # dependencies
 sudo apt install libxcb1-dev libxcb-keysyms1-dev libpango1.0-dev libxcb-util0-dev libxcb-icccm4-dev libyajl-dev libstartup-notification0-dev libxcb-randr0-dev libev-dev libxcb-cursor-dev libxcb-xinerama0-dev libxcb-xkb-dev libxkbcommon-dev libxkbcommon-x11-dev autoconf xutils-dev libtool automake
@@ -36,15 +28,14 @@ sudo apt install i3-gaps
 
 # bumblebee-status
 sudo apt install pip
-sudo apt install bumblebee-status
+git clone git://github.com/tobi-wan-kenobi/bumblebee-status ~/.config/i3/bumblebee-status
 sudo apt install python3-pulsectl # audio
 sudo apt install python3-psutil; sudo snap install gnome-system-monitor # cpu
 sudo apt install fonts-font-awesome
-git clone https://github.com/powerline/fonts.git --depth=1 ;\
-    cd fonts;\
-    ./install;\
-    fc-cache -vf;\
-    cd ..;\
-    rm -rf fonts
-sudo apt-get install fonts-powerline; fc-cache -vf
+sudo apt install fonts-powerline
 
+# firacode font
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/FiraCode.zip
+unzip FiraCode.zip -d ~/.fonts
+fc-cache -fv
+rm FiraCode.zip
