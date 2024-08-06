@@ -221,11 +221,6 @@ nvimtree.setup { -- BEGIN_DEFAULT_OPTS
       trash = true,
     },
   },
-  experimental = {
-    git = {
-      async = true,
-    },
-  },
   log = {
     enable = false,
     truncate = false,
