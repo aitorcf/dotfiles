@@ -18,7 +18,8 @@ export PATH=/opt/cisco/anyconnect/bin/:$PATH
 # nrgljubljana
 export PATH=$HOME/nrg/bin:$PATH
 # julia 
-export PATH=/home/aitor/Kodeak/julia-1.10.0/bin:$PATH
+#export PATH=/home/aitor/Kodeak/julia-1.10.0/bin:$PATH
+export PATH=/home/aitor/Kodeak/julia-1.11.3/bin:$PATH
 #export JULIA_NUM_THREADS=8
 # node
 export PATH=/home/aitor/Kodeak/node-v16.13.0-linux-arm64/bin:$PATH
