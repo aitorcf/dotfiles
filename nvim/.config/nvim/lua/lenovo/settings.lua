@@ -65,6 +65,12 @@ o.splitkeep = 'screen'
 -- Improve diff
 vim.opt.diffopt:append('linematch:60')
 
+-- Automatic spell-check in text files
+vim.cmd([[
+    au BufEnter *.tex set spell
+    au BufEnter *.md set spell
+]])
+
 -- WARNingj: this won't update the search count after pressing `n` or `N`
 -- When running macros and regexes on a large file, lazy redraw tells neovim/vim not to draw the screen
 -- o.lazyredraw = true
