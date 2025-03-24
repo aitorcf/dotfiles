@@ -4,19 +4,32 @@ snippet equation
 	\end{equation}
 # equation
 
+snippet equation_nonumber
+    \begin{equation*}
+        $0
+    \end{equation*}
+
 snippet aligned
-	\begin{equation}
 	\begin{aligned}
 		$0
 	\end{aligned}
-	\end{equation}
-# aligned equation
+# aligned 
 
 snippet align
 	\begin{align}
 		$0
 	\end{align}
 # align
+
+snippet align_nonumber
+    \begin{align*}
+        $0
+    \end{align*}
+
+snippet alignat_nonumber
+    \begin{alignat*}{$1}
+        $0
+    \end{alignat*}
 
 snippet figure
 	\begin{figure}
@@ -32,10 +45,10 @@ snippet verbatim
 #verbatim
 
 snippet itemize
-	\begin{itemize}
-		$0
-	\end{itemize}
-#itermize
+    \begin{itemize}
+    $0
+    \end{itemize}
+#itemize
 
 snippet enumerate
 	\begin{enumerate}
@@ -68,3 +81,28 @@ snippet frac
 	}{
 
 	}
+
+snippet frame
+    \begin{frame}
+        $0
+    \end{frame}
+
+snippet frame_with_title
+    \begin{frame}\frametitle{$1}
+        $0
+    \end{frame}
+snippet columns
+    \begin{columns}
+    $0
+    \end{columns}
+
+snippet columns_standard
+    \begin{columns}
+    \column{0.5\textwidth}
+    $0
+    \column{0.5\textwidth}
+    \end{columns}
+
+snippet sep
+    \setlength\itemsep{2em}$0
+
