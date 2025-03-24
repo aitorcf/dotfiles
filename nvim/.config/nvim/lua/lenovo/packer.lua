@@ -121,8 +121,9 @@ return packer.startup(function(use)
     })
     use("williamboman/mason-lspconfig.nvim")
     use("neovim/nvim-lspconfig")
+    -- use "nvimtools/none-ls.nvim"
     use("mfussenegger/nvim-dap")
-    use "nvimtools/none-ls.nvim"
+    use "mfussenegger/nvim-lint"
 
     -- Copilot
     use({ "github/copilot.vim" })
