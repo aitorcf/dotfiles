@@ -17,6 +17,8 @@ treesitter.setup {
       "query",
   },
 
+  ignore_installed = {"all"},
+
   incremental_selection = {
       enable = true,
       keymaps = {
