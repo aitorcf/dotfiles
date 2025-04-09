@@ -1,1 +1,1 @@
-require( "lenovo" )
+require("lenovo")

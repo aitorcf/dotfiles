@@ -80,7 +80,6 @@ map( "n" , "<leader>hj" , ":let $CURR_DIR=expand('%:p:h')<CR>:rightbelow 10split
 -- ==== --
 vim.keymap.set( "n" , "<leader>pe"  , ":tabedit " )
 map( "n" , "<leader>pp"  , ":tabnew<CR>" )
-map( "n" , "<leader>pc"  , ":tabclose<CR>" )
 map( "n" , "<leader>pin" , ":tabedit ~/.config/nvim/init.vim<CR>" )
 map( "n" , "<leader>po"  , ":tabonly<CR>" )
 map( "n" , "<leader>pt"  , ":tabnew term://zsh<CR>" )
