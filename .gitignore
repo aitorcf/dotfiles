@@ -1,1 +1,9 @@
 nvim/.config/nvim/plugin/packer_compiled.lua
+install/github.txt
+install/i3.sh
+install/stow.sh
+install/vim.sh
+install/zsh.sh
+nvim/.config/nvim/after/plugin/nvimlint.lua
+nvim/.config/nvim/after/plugin/unused/nvimtree.lua
+nvim/.config/nvim/lazy-lock.json
