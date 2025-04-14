@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install curl git -y
+sudo apt install zsh curl git -y
 
 # pure prompt
 mkdir -p "$HOME/.zsh"
