@@ -5,11 +5,8 @@ fpath+=($HOME/.zsh/pure)
 autoload -U promptinit; promptinit
 prompt pure
 
-# Set up the prompt
-# autoload -U colors && colors
-# #PROMPT='%F{green}%M %(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b %# '
-# PROMPT='%F{green}%M %(?.%F{green}√.%F{red}?%?)%f %B%F{cyan}%1~%f%b  ' #%F{green}>%f '
-
+# zoxide navigator
+eval "$(zoxide init zsh)"
 
 # PATH 
 export PATH=/usr/local/bin/:bin/:$PATH
@@ -35,8 +32,6 @@ autoload conda deactivate
 # vi mode
 bindkey -v
 
-# autosuggestion completion
-bindkey '^ ' autosuggest-accept
 
 #autoload -Uz promptinit
 #promptinit
@@ -104,9 +99,7 @@ alias julia_itensors="julia --sysimage /home/aitor/.julia/sysimages/sys_itensors
 autoload -U compinit && compinit -u
 
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#source /home/aitor/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-#
-
+bindkey '^j' autosuggest-accept
 
 # fzf fuzzy-finder
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
