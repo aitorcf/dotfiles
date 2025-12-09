@@ -2,6 +2,9 @@
 #. PERSONAL CONFIGURATION .#
 #. ###################### .#
 
+# polybar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
 # enable/disable touchpad 
 bindsym $mod+Ctrl+p exec synclient TouchpadOff=1
 bindsym $mod+Ctrl+Shift+p exec synclient TouchpadOff=0
