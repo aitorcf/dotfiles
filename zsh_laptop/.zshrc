@@ -8,30 +8,17 @@ prompt pure
 # zoxide navigator
 eval "$(zoxide init zsh)"
 
+# nodejs
+\. "$HOME/.nvm/nvm.sh"
+
 # PATH 
 export PATH=/usr/local/bin/:bin/:$PATH
-# cisco
-export PATH=/opt/cisco/anyconnect/bin/:$PATH 
-# nrgljubljana
-export PATH=$HOME/nrg/bin:$PATH
-# julia 
-#export PATH=/home/aitor/Kodeak/julia-1.10.0/bin:$PATH
-export PATH=/home/aitor/Kodeak/julia-1.11.3/bin:$PATH
-#export JULIA_NUM_THREADS=8
-# node
-export PATH=/home/aitor/Kodeak/node-v16.13.0-linux-arm64/bin:$PATH
-# pyenv 
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(pyenv init --path)"
-eval "$(pyenv virtualenv-init -)"
-
-autoload conda deactivate
-
-#alias python3="/usr/bin/python3.8"
+export PATH=/home/aitor/bin/:$PATH
+export PATH=/home/aitor/.local/bin:$PATH
+export PATH=/home/aitor/.julia/bin:$PATH
 
 # vi mode
 bindkey -v
-
 
 #autoload -Uz promptinit
 #promptinit
