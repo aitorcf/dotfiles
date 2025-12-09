@@ -150,4 +150,37 @@ return {
     -- comments (https://github.com/numToStr/Comment.nvim)
     { "numToStr/Comment.nvim", opts = {} },
 
+    -- repl interaction
+    { "Vigemus/iron.nvim" },
+
+    -- -- copilot
+    -- { "github/copilot.vim" },
+
+    -- ollama
+    -- { "David-Kunz/gen.nvim" },
+
+    -- -- notebook in neovim
+    -- {
+    --     "benlubas/molten-nvim",
+    --     version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
+    --     dependencies = { "3rd/image.nvim" },
+    --     build = ":UpdateRemotePlugins",
+    --     init = function()
+    --         -- these are examples, not defaults. Please see the readme
+    --         vim.g.molten_image_provider = "image.nvim"
+    --         vim.g.molten_output_win_max_height = 20
+    --     end,
+    -- },
+    -- {
+    --     "3rd/image.nvim",
+    --     version = "1.1.0", -- for stability
+    --     dependencies = {"vhyrro/luarocks.nvim"},
+    -- },
+    -- {
+    --     "vhyrro/luarocks.nvim",
+    --     priority = 1001, -- this plugin needs to run before anything else
+    --     opts = {
+    --         rocks = { "magick" },
+    --     },
+    -- }
 }
