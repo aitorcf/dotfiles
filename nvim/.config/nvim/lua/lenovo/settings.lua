@@ -83,3 +83,9 @@ vim.cmd([[
 
 -- Obsidian requirement
 o.conceallevel = 0
+
+-- Recommended by checkhealth
+vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- python in virtual environment
+vim.g.python3_host_prog = vim.fn.expand "~/.virtualenvs/neovim/bin/python3"
