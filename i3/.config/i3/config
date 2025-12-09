@@ -77,16 +77,6 @@ exec --no-startup-id firefox
 # set wallpaper
 exec_always xsetroot -solid "#363d38"
 
-
-########################
-# workspace management #
-########################
-assign [class="Firefox"] $ws3
-assign [class="qutebrowser"] $ws2
-assign [class="Code"] $ws2
-assign [class="Typora"] $ws4
-assign [class="obsidian"] $ws9
-
 #####################
 # window management #
 #####################
