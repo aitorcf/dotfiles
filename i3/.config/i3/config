@@ -298,23 +298,3 @@ bindsym $mod+y resize shrink width 3 px or 3 ppt
 bindsym $mod+u resize grow height 3 px or 3 ppt
 bindsym $mod+i resize shrink height 3 px or 3 ppt
 bindsym $mod+o resize grow width 3 px or 3 ppt
-
-bar {
-    font pango:Font Awesome, Inconsolata for Powerline 12
-    position top
-    tray_output none
-    status_command /home/aitor/.local/bin/bumblebee-status \
-        -m xrandr pulsein pulseout disk:root cpu memory battery date time network \
-        -p root.path=/ time.format="%H:%M CW %V" date.format="%a, %b %d %Y" \
-        -t gruvbox-powerline
-    colors {
-        background #282828
-        separator #928374
-        statusline #ebdbb2
-        focused_workspace #689d6a #689d6a #282828 #ffffff
-        active_workspace #1d2021 #1d2021 #928374 #ffffff
-        inactive_workspace #32302f #32302f #928374 #888888
-        urgent_workspace #cc241d #cc241d #ebdbb2 #ffffff
-    }
-}
-client.urgent #cc241d #cc241d #ebdbb2 #282828
