@@ -61,26 +61,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls='ls --color=auto'
 alias v='nvim'
-alias sv='vim -u ~/.SpaceVim/vimrc'
-
-# pointgroupnrg
-alias juliapgnrg='julia -J /home/aitor/Bulegoa/PointGroupNRG_Package/PointGroupNRG/PointGroupNRGScripted.so'
-alias julia_itensors="julia --sysimage /home/aitor/.julia/sysimages/sys_itensors.so"
-
-## >>> conda initialize >>>
-## !! Contents within this block are managed by 'conda init' !!
-#__conda_setup="$('/opt/intel/intelpython3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-#if [ $? -eq 0 ]; then
-#    eval "$__conda_setup"
-#else
-#    if [ -f "/opt/intel/intelpython3/etc/profile.d/conda.sh" ]; then
-#        . "/opt/intel/intelpython3/etc/profile.d/conda.sh"
-#    else
-#        export PATH="/opt/intel/intelpython3/bin:$PATH"
-#    fi
-#fi
-#unset __conda_setup
-## <<< conda initialize <<<
 
 [[ -s /home/aitor/.autojump/etc/profile.d/autojump.sh ]] && source /home/aitor/.autojump/etc/profile.d/autojump.sh
 autoload -U compinit && compinit -u
