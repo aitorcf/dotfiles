@@ -83,7 +83,6 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" }, 
         lazy = false,
     },
-    { 'echasnovski/mini.files', version = false },
 
     -- autopairs (https://github.com/windwp/nvim-autopairs)
     {
