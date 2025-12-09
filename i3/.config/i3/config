@@ -24,8 +24,8 @@ bindsym $mod+Ctrl+l exec /home/aitor/.config/i3/onlylaptop.sh
 bindsym $mod+c exec xfce4-terminal -e "vi /home/aitor/.config/i3/config"
 
 # screenshot 
-#bindsym --release Print exec scrot -e "/home/aitor/Pictures/Screenshots/screenshot_%Y%m%d_%H%M%S.png"
-#bindsym --release Shift+Print exec scrot -s "/home/aitor/Pictures/Screenshots/screenshot_%Y%m%d_%H%M%S.png"
+# bindsym --release Print exec scrot -e "/home/aitor/Pictures/Screenshots/screenshot_%Y%m%d_%H%M%S.png"
+# bindsym --release Shift+Print exec scrot -s "/home/aitor/Pictures/Screenshots/screenshot_%Y%m%d_%H%M%S.png"
 # sreenshots
 bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
 bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
