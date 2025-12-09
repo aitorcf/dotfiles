@@ -30,4 +30,7 @@ require("lazy").setup({
 
     -- automatically check for plugin updates
     checker = { enabled = true , notify = false },
+
+    -- for logging
+    dependencies = {"rmagatti/logger.nvim"}
 })
