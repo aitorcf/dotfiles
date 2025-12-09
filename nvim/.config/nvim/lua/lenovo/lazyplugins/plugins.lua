@@ -105,13 +105,23 @@ return {
         },
     },
 
-    -- lsp (https://github.com/williamboman/mason.nvim)
     {
-        "williamboman/mason.nvim",
-        lazy = false,
+        "williamboman/mason-lspconfig.nvim",
+        opts = {},
+        ensure_installed = {
+            "lua_ls",
+            "pyright",
+            "ltex",
+            "bashls"
+        },
+        dependencies = {
+            {
+                "williamboman/mason.nvim",
+                opts = {},
+            },
+            "neovim/nvim-lspconfig",
+        }
     },
-    { "williamboman/mason-lspconfig.nvim" },
-    { "neovim/nvim-lspconfig" },
     { "mfussenegger/nvim-lint" },
 
     -- preview declarations (https://github.com/rmagatti/goto-preview)
