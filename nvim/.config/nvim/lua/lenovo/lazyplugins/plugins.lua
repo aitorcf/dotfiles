@@ -152,6 +152,13 @@ return {
     -- repl interaction
     { "Vigemus/iron.nvim" },
 
+    -- typst
+    {
+        'chomosuke/typst-preview.nvim',
+        lazy = false, -- or ft = 'typst'
+        version = '1.*',
+        opts = {}, -- lazy.nvim will implicitly calls `setup {}`
+    },
     -- -- copilot
     -- { "github/copilot.vim" },
 
@@ -182,4 +189,30 @@ return {
     --         rocks = { "magick" },
     --     },
     -- }
+
+    --- Molten: notebook in neovim
+    {
+        "benlubas/molten-nvim",
+        version = "^1.0.0", -- use version <2.0.0 to avoid breaking changes
+        build = ":UpdateRemotePlugins",
+        init = function()
+            -- this is an example, not a default. Please see the readme for more configuration options
+            vim.g.molten_output_win_max_height = 12
+        end,
+    },
+
+    -- Quarto: markdown in neovim
+    {
+        "quarto-dev/quarto-nvim",
+        dependencies = {
+            "jmbuhr/otter.nvim",
+            "nvim-treesitter/nvim-treesitter",
+        },
+        ft = {"quarto", "markdown"}
+    },
+
+    {
+        "GCBallesteros/jupytext.nvim",
+        config = true,
+    },
 }
