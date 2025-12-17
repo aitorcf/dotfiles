@@ -25,7 +25,7 @@ iron.setup {
       python = {
           command = { "jupyter-console" }, --, "--ZMQTerminalInteractiveShell.image_handler=None" },
           format = require("iron.fts.common").bracketed_paste,
-          block_deviders = { "# %%", "#%%" },
+          block_dividers = { "#%%" },
       },
       julia = {
         command = { "julia" },  -- or { "ipython", "--no-autoindent" }
@@ -59,8 +59,7 @@ iron.setup {
     -- 
     repl_open_cmd = {
       view.split.vertical.rightbelow("%40"), -- cmd_1: open a repl to the right
-      -- view.split.rightbelow("%25")  -- cmd_2: open a repl below
-      view.bottom(40),
+      view.split.botright("%25")  -- cmd_2: open a repl below
     }
 
   },
