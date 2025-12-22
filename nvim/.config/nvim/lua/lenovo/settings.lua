@@ -88,4 +88,4 @@ o.conceallevel = 0
 vim.o.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
 -- python in virtual environment
-vim.g.python3_host_prog = vim.fn.expand "~/.virtualenvs/neovim/bin/python3"
+vim.g.python3_host_prog=vim.fn.expand("~/.virtualenvs/neovim/bin/python3")
