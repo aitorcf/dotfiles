@@ -58,8 +58,8 @@ iron.setup {
     -- For example,
     -- 
     repl_open_cmd = {
-      view.split.vertical.rightbelow("%40"), -- cmd_1: open a repl to the right
-      view.split.botright("%25")  -- cmd_2: open a repl below
+      view.split.botright("%25"),            -- cmd_1: open a repl below
+      view.split.vertical.rightbelow("%40"), -- cmd_2: open a repl to the right
     }
 
   },
@@ -69,8 +69,8 @@ iron.setup {
     toggle_repl = "<space>rr", -- toggles the repl open and closed.
     -- If repl_open_command is a table as above, then the following keymaps are
     -- available
-    toggle_repl_with_cmd_1 = "<space>rv",
-    toggle_repl_with_cmd_2 = "<space>rh",
+    toggle_repl_with_cmd_1 = "<space>rr",
+    toggle_repl_with_cmd_2 = "<space>rv",
     restart_repl = "<space>rR", -- calls `IronRestart` to restart the repl
     send_motion = "<space>sc",
     visual_send = "<space>sc",
@@ -99,4 +99,4 @@ iron.setup {
 
 -- iron also has a list of commands, see :h iron-commands for all available commands
 vim.keymap.set('n', '<space>rf', '<cmd>IronFocus<cr>')
-vim.keymap.set('n', '<space>rh', '<cmd>IronHide<cr>')
+vim.keymap.set('n', '<space>H', '<cmd>IronHide<cr>')
