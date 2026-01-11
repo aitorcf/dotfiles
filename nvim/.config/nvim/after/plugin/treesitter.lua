@@ -15,6 +15,7 @@ treesitter.setup {
       "vim",
       "vimdoc",
       "query",
+      "clojure"
   },
 
   ignore_installed = {"all"},
