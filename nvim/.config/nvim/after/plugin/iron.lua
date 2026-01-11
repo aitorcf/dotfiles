@@ -31,6 +31,10 @@ iron.setup {
         command = { "julia" },  -- or { "ipython", "--no-autoindent" }
         block_dividers = { "# %%", "#%%" },
         -- env = {PYTHON_BASIC_REPL = "1"} --this is needed for python3.13 and up.
+      },
+      lein = {
+          command = {"lein repl"},
+          block_dividers = {";%%"},
       }
     },
     -- set the file type of the newly created repl to ft
