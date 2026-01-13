@@ -1,0 +1,141 @@
+#   ------
+#%% prompt
+#   ------
+fpath+=($HOME/.zsh/pure)
+autoload -U promptinit; promptinit
+prompt pure
+
+# zoxide navigator
+eval "$(zoxide init zsh)"
+
+# nodejs
+\. "$HOME/.nvm/nvm.sh"
+
+# PATH 
+export PATH=/usr/local/bin/:bin/:$PATH
+export PATH=~/bin/:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH=~/.julia/bin:$PATH
+
+# vi mode
+bindkey -v
+
+#autoload -Uz promptinit
+#promptinit
+#prompt adam1
+
+setopt histignorealldups sharehistory
+
+# share history throughout sessions
+setopt share_history append_history
+
+# enable autocorrection
+#setopt correct correct_all
+
+# Keep 1000 lines of history within the shell and save it to ~/.zsh_history:
+HISTSIZE=1000
+SAVEHIST=1000
+HISTFILE=~/.zsh_history
+
+# Use modern completion system
+autoload -Uz compinit
+compinit
+
+zstyle ':completion:*' auto-description 'specify: %d'
+zstyle ':completion:*' completer _expand _complete _correct _approximate
+zstyle ':completion:*' format 'Completing %d'
+zstyle ':completion:*' group-name ''
+zstyle ':completion:*' menu select=2
+eval "$(dircolors -b)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
+zstyle ':completion:*' list-colors ''
+zstyle ':completion:*' list-prompt %SAt %p: Hit TAB for more, or the character to insert%s
+zstyle ':completion:*' matcher-list '' 'm:{a-z}={A-Z}' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=* l:|=*'
+zstyle ':completion:*' menu select=long
+zstyle ':completion:*' select-prompt %SScrolling active: current selection at %p%s
+zstyle ':completion:*' use-compctl false
+zstyle ':completion:*' verbose true
+
+zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+
+alias ls='ls --color=auto'
+alias v='nvim'
+
+[[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^j' autosuggest-accept
+
+# fzf fuzzy-finder
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+#export FZF_DEFAULT_COMMAND='find -L'
+export FZF_DEFAULT_OPTS="
+--layout=reverse
+--info=inline
+--height=80%
+--multi
+--preview-window=:hidden
+--preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+--color='hl:148,hl+:154,pointer:032,marker:010,bg+:237,gutter:008'
+--prompt='∼ ' --pointer='▶' --marker='✓'
+--bind '?:toggle-preview'
+--bind 'ctrl-a:select-all'
+--bind 'ctrl-y:execute-silent(echo {+} | pbcopy)'
+--bind 'ctrl-e:execute(echo {+} | xargs -o vim)'
+--bind 'ctrl-v:execute(code {+})'
+"
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/aitor/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<
+
+# -------------------- #
+# python3 venv wrapper #
+# -------------------- #
+# include following in .bashrc / .bash_profile / .zshrc
+# usage
+# $ mkvenv myvirtualenv # creates venv under ~/.virtualenvs/
+# $ venv myvirtualenv   # activates venv
+# $ deactivate          # deactivates venv
+# $ rmvenv myvirtualenv # removes venv
+
+export VENV_HOME="$HOME/.virtualenvs"
+[[ -d $VENV_HOME ]] || mkdir $VENV_HOME
+
+lsvenv() {
+  ls -1 $VENV_HOME
+}
+
+venv() {
+  if [ $# -eq 0 ]
+    then
+      echo "Please provide venv name"
+    else
+      source "$VENV_HOME/$1/bin/activate"
+  fi
+}
+
+mkvenv() {
+  if [ $# -eq 0 ]
+    then
+      echo "Please provide venv name"
+    else
+      python3 -m venv $VENV_HOME/$1
+  fi
+}
+
+rmvenv() {
+  if [ $# -eq 0 ]
+    then
+      echo "Please provide venv name"
+    else
+      rm -r $VENV_HOME/$1
+  fi
+}
