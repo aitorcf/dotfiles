@@ -5,3 +5,5 @@ Installation/setup files can be found in the 'setup' folder.
 First: install stow
 Second: setup zsh and enter zsh; proceed from within.
 Then: for each config, setup first and then stow <foldername>
+
+!!! There seems to be a problem with polybar
