@@ -1,10 +1,4 @@
-local status,treesitter = pcall( require , 'nvim-treesitter.configs' )
-if (not status) then
-    print( "Treesitter not installed." )
-    return
-end
-
-treesitter.setup {
+require("nvim-treesitter").setup {
 
   ensure_installed = {
       "cpp",
