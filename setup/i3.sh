@@ -9,3 +9,6 @@ sudo apt install i3
 
 # install polybar
 sh ./polybar.sh
+
+# install rofi
+sudo apt install rofi
