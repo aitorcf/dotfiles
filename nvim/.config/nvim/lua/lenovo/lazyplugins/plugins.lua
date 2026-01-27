@@ -5,9 +5,7 @@ return {
         "ellisonleao/gruvbox.nvim",
         priority = 1000,
         lazy = false,
-        opts = {
-
-        }
+        opts = {}
     },
 
     -- gitsigns (https://github.com/lewis6991/gitsigns.nvim)
@@ -56,7 +54,7 @@ return {
             "nvim-telescope/telescope-fzf-native.nvim",
             "folke/todo-comments.nvim",
         },
-        opts = {}, 
+        opts = {},
     },
 
     -- undo-tree (https://github.com/mbbill/undotree)
@@ -90,8 +88,56 @@ return {
         config = true
     },
 
-    -- surround 
+    -- surround and related
     { "tpope/vim-surround", config = function () end },
+    -- {
+    --     "julienvincent/nvim-paredit",
+    --     config = function()
+    --         require("nvim-paredit").setup()
+    --     end
+    -- },
+    {
+      'guns/vim-sexp',
+      lazy = false,
+      init = function()
+        -- General plugin option settings
+        vim.g.sexp_indent_does_clean = 1
+        vim.g.sexp_clone_does_indent = 1
+        vim.g.sexp_indent_aligns_comments = 1
+        -- Custom keymaps
+        vim.g.sexp_mappings = {
+          -- Note: Commands not overridden here will use default keymaps.
+          -- Note: Setting to empty string disables a command.
+          sexp_indent_and_clean = '<M-=>',
+          sexp_indent_and_clean_top = '<M-->',
+          sexp_align_comments = '<M-a>',
+          sexp_align_comments_top = '<M-\\>',
+          sexp_insert_at_list_head = '<M-I>',
+          sexp_insert_at_list_tail = '<M-A>',
+          sexp_splice_list = '<M-@>',
+          sexp_convolute = '<M-?>',
+          sexp_clone_list = '<LocalLeader>C',
+          sexp_clone_list_sl = '<LocalLeader><LocalLeader>C',
+          sexp_clone_list_ml = '<A-C>',
+          sexp_clone_element = '<LocalLeader>c',
+          sexp_clone_element_sl = '<LocalLeader><LocalLeader>c',
+          sexp_clone_element_ml = '<A-c>',
+          sexp_raise_list = '<M-O>',
+          sexp_raise_element = '<M-o>',
+          sexp_swap_list_backward = '<M-H>',
+          sexp_swap_list_forward = '<M-L>',
+          sexp_swap_element_backward = '<M-h>',
+          sexp_swap_element_forward = '<M-l>',
+          sexp_emit_head_element = '<M-P>',
+          sexp_emit_tail_element = '<M-p>',
+          sexp_capture_prev_element = '<M-T>',
+          sexp_capture_next_element = '<M-t>',
+        }
+      end,
+    },
+    {
+        "tpope/vim-sexp-mappings-for-regular-people",
+    },
 
     -- git integration (https://github.com/NeogitOrg/neogit)
     {
@@ -248,5 +294,18 @@ return {
     { 'tpope/vim-dispatch' },
     { 'clojure-vim/vim-jack-in' },
     { 'radenling/vim-dispatch-neovim' },
+
+    -- typst
+    {
+        'chomosuke/typst-preview.nvim',
+        lazy = false, -- or ft = 'typst'
+        version = '1.*',
+        opts = {
+            dependencies_bin = {
+                ['tinymist'] = 'tinymist',
+                ['websocat'] = nil
+            },
+        },
+    }
 
 }
