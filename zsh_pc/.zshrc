@@ -139,3 +139,8 @@ rmvenv() {
       rm -r $VENV_HOME/$1
   fi
 }
+
+# JETLS.jl install after juliaup
+jetlsinstall() {
+    julia -e 'using Pkg; Pkg.Apps.add(; url="https://github.com/aviatesk/JETLS.jl", rev="release")'
+}
