@@ -1,8 +1,8 @@
 vim.lsp.config("jetls", {
     cmd = {
         "jetls",
-        "--threads=auto",
-        "--",
+        "serve",
+       -- "--threads=auto",
     },
     filetypes = { "julia" },
     root_markers = { "Project.toml" }
