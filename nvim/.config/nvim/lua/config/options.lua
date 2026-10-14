@@ -1,0 +1,34 @@
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
+
+local o = vim.o
+o.termguicolors = true
+o.scrolloff = 8
+o.number = true
+o.numberwidth = 5
+o.relativenumber = true
+o.cursorline = true
+o.expandtab = true
+o.cindent = true
+o.wrap = true
+o.textwidth = 300
+o.tabstop = 4
+o.shiftwidth = 0
+o.softtabstop = -1
+o.list = true
+o.listchars = "trail:·,nbsp:◇,tab:→ ,extends:▸,precedes:◂"
+o.clipboard = "unnamedplus"
+o.ignorecase = true
+o.smartcase = true
+o.backup = false
+o.writebackup = false
+o.undofile = true
+o.swapfile = false
+o.history = 50
+o.splitright = true
+o.splitbelow = true
+o.jumpoptions = "view"
+o.splitkeep = "screen"
+vim.opt.diffopt:append("linematch:60")
+o.conceallevel = 0
+o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"

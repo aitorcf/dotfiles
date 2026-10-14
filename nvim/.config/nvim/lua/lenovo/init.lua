@@ -1,7 +1,0 @@
-require("lenovo.settings")
-require("lenovo.keymaps")
-require("lenovo.lazy")
-require("lenovo.colors")
-require("lenovo.autocommands")
-require("lenovo.lsp")
-require("lenovo.treefloat")
