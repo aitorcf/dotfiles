@@ -60,7 +60,8 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 alias ls='ls --color=auto'
-alias v='nvim'
+# Force legacy terminal behavior for Neovim until CSI-u duplication is resolved
+alias v='TERM=xterm-256color nvim'
 alias fd='fdfind'
 
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && source ~/.autojump/etc/profile.d/autojump.sh
