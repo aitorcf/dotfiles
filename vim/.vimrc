@@ -149,111 +149,3 @@ nnoremap <silent> <Tab>y      :-tabmove<CR>
 nnoremap <leader>nh :noh<CR>
 " fugitive
 nnoremap <leader>gs :Git<CR>
-
-"" map <F2> to :w 
-"map  <F2> :w
-"map! <F2> :wi
-"
-"map  <F5> V/^[% ]*$gq``
-"map! <F5> V/^[% ]*$gaqq``
-"map  <S-F5> !}fmt
-"map! <S-F5> !}fmti
-"
-"" wrap down / upwards and maximize / hide buffer (like PM)
-"map  <F8>  
-"map!  <F8>  
-"map  <F7>  W
-"map!  <F7>  W
-"map  <F9>  c
-"map  <F10> _
-"map!  <F10> _
-"
-"" toggle paste / nopaste mode
-"map! <F11> :set pastei
-"map  <F11> :set pasteo
-"map  <F12> :set nopaste
-"
-"version 5.0		" avoid warning for wrong version
-"
-"set bs=2		" allow backspacing over everything in insert mode
-"set ai			" always set autoindenting on
-"set tw=72		" always limit the width of text to 78
-"set backup		" keep a backup file
-"set viminfo='20,\"50	" read/write a .viminfo file, don't store more
-"			" than 50 lines of registers
-
-" When starting to edit a file:
-"   For *.c and *.h files set formatting of comments and set C-indenting on
-"   For other files switch it off
-"   Don't change the sequence, it's important that the line with * comes first.
-"autocmd BufRead * set formatoptions=tcql nocindent comments&
-"autocmd BufRead *.c,*.h set formatoptions=croql cindent comments=sr:/*,mb:*,el:*/,://
-
-" now some stuff for fortran files (*.f, *.fpp, *.for)
-" ======================================================================
-"autocmd BufRead *.f,*.for,*.fpp,*.web set tw=72  
-" autocmd BufRead *.f,*.for,*.fpp,*.web map! ,dp double precision 
-" autocmd BufRead *.f,*.for,*.fpp,*.web map! ,in implicit none
-" autocmd BufRead *.f,*.for,*.fpp,*.web map! ,f function implicit noneend4-A
-" autocmd BufRead *.f,*.for,*.fpp,*.web map! ,p subroutine implicit noneend4-A
-" autocmd BufRead *.f,*.for,*.fpp,*.web map! ,p :r ~/share/lib/vim_lib/sub-f77.libA 
-
-
-" and for LaTeX, and Web files (*.tex, *.ltx, *.web)
-" ======================================================================
-
-" general stuff
-" ----------------------------------------------------------------------
-" some environments  / shortcuts
-" autocmd BufRead,BufNewFile *.tex,*.ltx,*.web map! ,e yypi\label{}\end{A}%3-i%\begin{A}
-" for smartindend, don't use cindent
-"autocmd BufRead,BufNewFile *.tex,*.ltx,*.web set cinwords=\\item,\\begin,\\caption
-"autocmd BufRead,BufNewFile *.tex,*.ltx,*.web map  <F3>   :w:! latex % 
-"autocmd BufRead,BufNewFile *.tex,*.ltx,*.web map! <F3> :w:! latex % 
-"autocmd BufRead,BufNewFile *.tex,*.ltx       cmap view  :! xdvi -bg white -fg black %:r & 
-
-" and for GLE (*.gle) files:
-" ======================================================================
-"autocmd BufRead,BufNewFile *.gle map  <F3>   :w:! gle -dx \/drawit % & 
-"autocmd BufRead,BufNewFile *.gle map! <F3> :w:! gle -dx \/drawit % & 
-
-" some stuff for (*.gpl) gnuplot:
-" ----------------------------------------------------------------------
-"autocmd BufRead,BufNewFile *.gpl map  <F3>   :w:! gnuplot % 
-"autocmd BufRead,BufNewFile *.gpl map! <F3> :w:! gnuplot % 
-
-" some stuff for povray:
-" ----------------------------------------------------------------------
-"autocmd BufRead,BufNewFile *.pov map  <F3>   :w:! x-povray +I% +D & 
-"autocmd BufRead,BufNewFile *.pov map! <F3> :w:! x-povray +I% +D & 
-
-" Enable editing of gzipped files
-"    read: set binary mode before reading the file
-"          uncompress text in buffer after reading
-"   write: compress file after writing
-"  append: uncompress file, append, compress file
-"autocmd BufReadPre,FileReadPre      *.gz set bin
-"autocmd BufReadPost,FileReadPost    *.gz '[,']!gunzip
-"autocmd BufReadPost,FileReadPost    *.gz set nobin
-
-"autocmd BufWritePost,FileWritePost  *.gz !mv <afile> <afile>:r
-"autocmd BufWritePost,FileWritePost  *.gz !gzip <afile>:r
-
-"autocmd FileAppendPre		    *.gz !gunzip <afile>
-"autocmd FileAppendPre		    *.gz !mv <afile>:r <afile>
-"autocmd FileAppendPost		    *.gz !mv <afile> <afile>:r
-"autocmd FileAppendPost		    *.gz !gzip <afile>:r
-
-"the end.
-
-"
-" ----------------------------------------------------------------------
-" $Header: /usr/users/sad/dipc/admin/computing/newuser/dots/RCS/dot-vimrc,v 1.2 2000/05/30 11:40:52 sad Exp sad $
-"
-" $Log: dot-vimrc,v $
-" Revision 1.2  2000/05/30  11:40:52  sad
-" Added RCS header information.
-"
-"
-" ----------------------------------------------------------------------
-" eof.
