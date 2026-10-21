@@ -38,3 +38,13 @@ vim.lsp.config("jetls", {
   filetypes = { "julia" },
 })
 vim.lsp.enable("jetls")
+
+-- diagnostic noise reduction
+vim.diagnostic.config({
+  virtual_text = false,
+  signs = true,
+  underline = true,
+  severity_sort = true,
+  update_in_insert = false,
+  float = { border = "rounded", source = "if_many" },
+})
