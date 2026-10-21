@@ -14,8 +14,25 @@ return {
     },
   },
   {
-    "lewis6991/gitsigns.nvim",
-    opts = {},
+      "lewis6991/gitsigns.nvim",
+      opts = {
+          signs = {
+              add          = { text = " " },
+              change       = { text = " " },
+              delete       = { text = " " },
+              topdelete    = { text = "󰁂 " },
+              changedelete = { text = " " },
+              untracked    = { text = " " },
+          },
+          signs_staged = {
+              add          = { text = " " },
+              change       = { text = " " },
+              delete       = { text = " " },
+              topdelete    = { text = "󰁂 " },
+              changedelete = { text = " " },
+              untracked    = { text = " " },
+          },
+      },
     keys = {
       { "<leader>gk", "<cmd>Gitsigns prev_hunk<cr>",    desc = "Prev hunk" },
       { "<leader>gj", "<cmd>Gitsigns next_hunk<cr>",    desc = "Next hunk" },
