@@ -71,9 +71,7 @@ bindsym $mod+t exec nautilus
 # set keyboard layout to spanish
 exec_always --no-startup-id setxkbmap es
 # load programs
-#exec --no-startup-id alacritty 
 exec --no-startup-id firefox
-# exec --no-startup-id obsidian
 # set wallpaper
 exec_always xsetroot -solid "#363d38"
 
